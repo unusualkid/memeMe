@@ -41,14 +41,16 @@ extension ViewController {
     
     func displaySavedMessage(error: Error?) {
         if let error = error {
-            let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default))
-            present(alert, animated: true)
+            displayAlert(title: "Error", message: error.localizedDescription)
         } else {
-            let alert = UIAlertController(title: "Saved!", message: "Image saved successfully", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "OK", style: .default))
-            present(alert, animated: true)
+            displayAlert(title: "Saved!", message: "Image saved successfully")
         }
+    }
+    
+    func displayAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alert, animated: true)
     }
     
     
@@ -56,6 +58,11 @@ extension ViewController {
     
     @IBAction func callActivityViewController(_ sender: Any) {
         let meme = Meme(topText: topText.text!, bottomText: bottomText.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
+        
+        // add the meme to the array on the AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.memes.append(meme)
+        
         let image = meme.memedImage
         let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
 

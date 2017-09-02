@@ -30,20 +30,23 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         }
     }
     
-    // MARK: Actions
-
-    @IBAction func pickAnImageFromAlbum(_ sender: Any) {
+    // MARK: Helpers
+    
+    func chooseSourceType(sourceType: UIImagePickerControllerSourceType) {
         let imagePickerController = UIImagePickerController()
         imagePickerController.delegate = self
-        imagePickerController.sourceType = .photoLibrary
+        imagePickerController.sourceType = sourceType
         present(imagePickerController, animated: true, completion: nil)
     }
     
+    // MARK: Actions
+
+    @IBAction func pickAnImageFromAlbum(_ sender: Any) {
+        chooseSourceType(sourceType: .photoLibrary)
+    }
+    
     @IBAction func pickAnImageFromCamera(_ sender: Any) {
-        let imagePickerController = UIImagePickerController()
-        imagePickerController.delegate = self
-        imagePickerController.sourceType = .camera
-        present(imagePickerController, animated: true, completion: nil)
+        chooseSourceType(sourceType: .camera)
     }
     
 }

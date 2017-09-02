@@ -16,7 +16,9 @@
 		3C1E836C1F51E9CB00211E09 /* ViewController-ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1E836B1F51E9CB00211E09 /* ViewController-ImagePicker.swift */; };
 		3C1E836E1F51EC9A00211E09 /* ViewController-Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1E836D1F51EC9A00211E09 /* ViewController-Keyboard.swift */; };
 		3C1E83721F526C8400211E09 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C1E83711F526C8400211E09 /* Meme.swift */; };
-		3C72457D1F57BB9100D26648 /* ViewController-MemeSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C72457C1F57BB9100D26648 /* ViewController-MemeSaver.swift */; };
+		3C72457D1F57BB9100D26648 /* ViewController-MemeEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C72457C1F57BB9100D26648 /* ViewController-MemeEditor.swift */; };
+		3C7245831F59171300D26648 /* MemeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7245821F59171300D26648 /* MemeCollectionViewController.swift */; };
+		3C7245851F59172F00D26648 /* MemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3C7245841F59172F00D26648 /* MemeTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +33,9 @@
 		3C1E836B1F51E9CB00211E09 /* ViewController-ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController-ImagePicker.swift"; sourceTree = "<group>"; };
 		3C1E836D1F51EC9A00211E09 /* ViewController-Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController-Keyboard.swift"; sourceTree = "<group>"; };
 		3C1E83711F526C8400211E09 /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
-		3C72457C1F57BB9100D26648 /* ViewController-MemeSaver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController-MemeSaver.swift"; sourceTree = "<group>"; };
+		3C72457C1F57BB9100D26648 /* ViewController-MemeEditor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ViewController-MemeEditor.swift"; sourceTree = "<group>"; };
+		3C7245821F59171300D26648 /* MemeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewController.swift; sourceTree = "<group>"; };
+		3C7245841F59172F00D26648 /* MemeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +85,9 @@
 				3C1E83591F4EE47000211E09 /* ViewController.swift */,
 				3C1E836B1F51E9CB00211E09 /* ViewController-ImagePicker.swift */,
 				3C1E836D1F51EC9A00211E09 /* ViewController-Keyboard.swift */,
-				3C72457C1F57BB9100D26648 /* ViewController-MemeSaver.swift */,
+				3C72457C1F57BB9100D26648 /* ViewController-MemeEditor.swift */,
+				3C7245821F59171300D26648 /* MemeCollectionViewController.swift */,
+				3C7245841F59172F00D26648 /* MemeTableViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -171,8 +177,10 @@
 			files = (
 				3C1E836C1F51E9CB00211E09 /* ViewController-ImagePicker.swift in Sources */,
 				3C1E835A1F4EE47000211E09 /* ViewController.swift in Sources */,
-				3C72457D1F57BB9100D26648 /* ViewController-MemeSaver.swift in Sources */,
+				3C72457D1F57BB9100D26648 /* ViewController-MemeEditor.swift in Sources */,
+				3C7245851F59172F00D26648 /* MemeTableViewController.swift in Sources */,
 				3C1E83581F4EE47000211E09 /* AppDelegate.swift in Sources */,
+				3C7245831F59171300D26648 /* MemeCollectionViewController.swift in Sources */,
 				3C1E83721F526C8400211E09 /* Meme.swift in Sources */,
 				3C1E836E1F51EC9A00211E09 /* ViewController-Keyboard.swift in Sources */,
 				3C1E836A1F51250B00211E09 /* CaptionTextFieldDelegate.swift in Sources */,
