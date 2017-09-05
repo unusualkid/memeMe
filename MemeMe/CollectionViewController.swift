@@ -12,8 +12,15 @@ class CollectionViewController: UICollectionViewController {
 
     @IBOutlet weak var addButton: UIBarButtonItem!
     
-    var memes: [Meme]{
-        return (UIApplication.shared.delegate as! AppDelegate).memes
+    var memes = [Meme]()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        memes = appDelegate.memes
+        
+        self.collectionView?.reloadData()
     }
     
     override func viewDidLoad() {
@@ -36,7 +43,7 @@ class CollectionViewController: UICollectionViewController {
         let meme = self.memes[(indexPath as NSIndexPath).row]
         
         // Configure the cell
-        cell.memeImageView.image = meme.memedImage
+        cell.imageView.image = meme.memedImage
         
         return cell
     }

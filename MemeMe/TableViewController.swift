@@ -12,12 +12,13 @@ class TableViewController: UITableViewController {
 
     @IBOutlet weak var addButton: UIBarButtonItem!
     
-    var memes: [Meme]{
-        return (UIApplication.shared.delegate as! AppDelegate).memes
-    }
+    var memes = [Meme]()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        memes = appDelegate.memes
         
         self.tableView.reloadData()
     }
@@ -25,6 +26,7 @@ class TableViewController: UITableViewController {
     // MARK: UITableViewDataSource
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return self.memes.count
     }
 

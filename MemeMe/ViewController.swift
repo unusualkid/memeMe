@@ -24,15 +24,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var topText: UITextField!
     @IBOutlet weak var bottomText: UITextField!
 
-
-    
     
     // MARK: Properties
     
     let topTextFieldDelegate = CaptionTextFieldDelegate()
     let bottomTextFieldDelegate = CaptionTextFieldDelegate()
     
-    var memedImage: UIImage!
+//    var memedImage: UIImage!
+    var meme: Meme!
     
     var barsAreHidden = false
     

@@ -67,10 +67,8 @@ extension ViewController {
             // if the activityType is save, don't save twice, just display the savedMessage
             if activityType != UIActivityType.saveToCameraRoll && completed {
                 UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
-            
-                self.save(meme: meme)
             }
-            
+            self.save(meme: meme)
             self.navigationController?.popViewController(animated: true)
         }
     }

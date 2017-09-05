@@ -10,6 +10,6 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var memeImageView: UIImageView!
+    @IBOutlet weak var imageView: UIImageView!
     
 }
