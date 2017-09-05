@@ -22,29 +22,28 @@ extension ViewController {
         UIGraphicsBeginImageContext(view.frame.size)
         
         view.drawHierarchy(in: view.frame, afterScreenUpdates: true)
-        let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()!
-
+        let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
         UIGraphicsEndImageContext()
-
+        
         toolBar.isHidden = false
-
+        
         return memedImage
     }
     
-    func save(image: UIImage) {
-        UIImageWriteToSavedPhotosAlbum(image, self, #selector(image(_:didFinishSavingWithError:contextInfo:)), nil)
+    func share(image: UIImage) -> Meme {
+        let meme = Meme(topText: topText.text!, bottomText: bottomText.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
+
+        return meme
     }
     
-    func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-        self.displaySavedMessage(error: error)
-    }
-    
-    func displaySavedMessage(error: Error?) {
-        if let error = error {
-            displayAlert(title: "Error", message: error.localizedDescription)
-        } else {
-            displayAlert(title: "Saved!", message: "Image saved successfully")
-        }
+//    func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
+//        self.displaySavedMessage(error: error)
+//    }
+
+    // Add the meme to the array on the AppDelegate
+    func save(meme: Meme) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.memes.append(meme)
     }
     
     func displayAlert(title: String, message: String) {
@@ -57,29 +56,22 @@ extension ViewController {
     // MARK: Actions
     
     @IBAction func callActivityViewController(_ sender: Any) {
-        let meme = Meme(topText: topText.text!, bottomText: bottomText.text!, originalImage: imagePickerView.image!, memedImage: generateMemedImage())
-        
-        // add the meme to the array on the AppDelegate
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.memes.append(meme)
-        
+        let meme = share(image: imagePickerView.image!)
         let image = meme.memedImage
+        
         let controller = UIActivityViewController(activityItems: [image], applicationActivities: nil)
-
         self.present(controller, animated: true, completion: nil)
         
-        
         controller.completionWithItemsHandler = {(activityType, completed, returnedItems, error) in
-            if !completed {
-                return
+
+            // if the activityType is save, don't save twice, just display the savedMessage
+            if activityType != UIActivityType.saveToCameraRoll && completed {
+                UIImageWriteToSavedPhotosAlbum(image, self, nil, nil)
+            
+                self.save(meme: meme)
             }
             
-            // if the activityType is save, don't save twice, just display the savedMessage
-            if activityType != UIActivityType.saveToCameraRoll {
-                self.save(image: image)
-            } else {
-                self.displaySavedMessage(error: error)
-            }
+            self.navigationController?.popViewController(animated: true)
         }
     }
 }

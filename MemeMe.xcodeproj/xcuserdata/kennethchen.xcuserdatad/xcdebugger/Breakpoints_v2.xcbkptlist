@@ -9,61 +9,14 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "MemeMe/AppDelegate.swift"
-            timestampString = "525932009.184119"
+            filePath = "MemeMe/ViewController-MemeEditor.swift"
+            timestampString = "526282062.08326"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "15"
-            endingLineNumber = "15"
-            landmarkName = "AppDelegate"
-            landmarkType = "3">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MemeMe.AppDelegate.memes.getter : Swift.Array&lt;MemeMe.Meme&gt;"
-                  moduleName = "MemeMe"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kennethchen/Documents/Udacity/iOS%20Nanodegree/MemeMe/MemeMe/AppDelegate.swift"
-                  timestampString = "526034466.828953"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "38">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MemeMe.AppDelegate.memes.setter : Swift.Array&lt;MemeMe.Meme&gt;"
-                  moduleName = "MemeMe"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kennethchen/Documents/Udacity/iOS%20Nanodegree/MemeMe/MemeMe/AppDelegate.swift"
-                  timestampString = "526034466.849665"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "76">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "MemeMe.AppDelegate.init () -&gt; MemeMe.AppDelegate"
-                  moduleName = "MemeMe"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/kennethchen/Documents/Udacity/iOS%20Nanodegree/MemeMe/MemeMe/AppDelegate.swift"
-                  timestampString = "526034466.852447"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "15"
-                  endingLineNumber = "15"
-                  offsetFromSymbolStart = "45">
-               </Location>
-            </Locations>
+            startingLineNumber = "64"
+            endingLineNumber = "64"
+            landmarkName = "callActivityViewController(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

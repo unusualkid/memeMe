@@ -24,6 +24,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var topText: UITextField!
     @IBOutlet weak var bottomText: UITextField!
 
+
     
     
     // MARK: Properties
@@ -46,6 +47,7 @@ class ViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        self.tabBarController?.tabBar.isHidden = true
         subscribeToKeyboardNotifications()
     }
     
@@ -54,7 +56,6 @@ class ViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(self.tap(gesture:)))
         view.addGestureRecognizer(tapGesture)
         
-        cancelButton.isEnabled = false
         actionButton.isEnabled = false
         topText.text = "TOP"
         configureUI(topText)
@@ -66,6 +67,7 @@ class ViewController: UIViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
+        self.tabBarController?.tabBar.isHidden = false
         unsubscribeFromKeyboardNotifications()
     }
     
@@ -93,13 +95,7 @@ class ViewController: UIViewController {
     // MARK: Actions
     
     @IBAction func cancelPickedImage(_ sender: Any) {
-        imagePickerView.image = nil
-        cancelButton.isEnabled = false
-        actionButton.isEnabled = false
-        topText.text = "TOP"
-        bottomText.text = "BOTTOM"
-        topTextFieldDelegate.isDefaultText = true
-        bottomTextFieldDelegate.isDefaultText = true
+        self.navigationController?.popViewController(animated: true)
     }
 }
 
