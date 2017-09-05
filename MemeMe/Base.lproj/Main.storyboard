@@ -33,6 +33,7 @@
             <objects>
                 <navigationController title="CollectionNavigationController" id="nZx-DR-y4w" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="collection_30x30" id="bZd-qv-vrV"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ms2-Cl-hah">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -52,7 +53,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="orh-xf-tSD">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Olp-ja-9h3">
                             <size key="itemSize" width="119" height="115"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -98,6 +99,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addButton" destination="CyZ-6X-Z23" id="L1e-jA-b0L"/>
+                        <outlet property="flowLayout" destination="Olp-ja-9h3" id="zzX-wm-843"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cpJ-tD-v7j" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -112,6 +114,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="TableViewCell" textLabel="pkZ-pv-0M9" rowHeight="106" style="IBUITableViewCellStyleDefault" id="yoE-AX-PkG">
                                 <rect key="frame" x="0.0" y="28" width="375" height="106"/>
@@ -156,8 +159,8 @@
             <objects>
                 <navigationController title="TableNavigationController" id="J3r-t3-Sj2" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="table_30x30" id="ATI-Ci-s32"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="hE7-yI-1yd">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hE7-yI-1yd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -221,7 +224,6 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" spellCheckingType="yes"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eqq-1w-LbH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0dM-lR-rSC"/>
                             <constraint firstItem="6mr-8o-6gz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="40" id="T91-fn-Mvv"/>
@@ -293,13 +295,7 @@
                             <constraint firstItem="MeB-iE-JDx" firstAttribute="top" secondItem="tbx-Oe-LTz" secondAttribute="bottom" constant="8" symbolic="YES" id="vEx-4l-BcQ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="85R-r5-sBm">
-                        <barButtonItem key="rightBarButtonItem" systemItem="edit" id="Ufk-s7-eti">
-                            <connections>
-                                <action selector="editMeme:" destination="WRs-Vj-sAE" id="TOJ-de-Jhr"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="85R-r5-sBm"/>
                     <connections>
                         <outlet property="memeImageView" destination="tbx-Oe-LTz" id="9h4-kx-S7M"/>
                     </connections>
@@ -332,6 +328,6 @@
         <image name="table_30x30" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="p0D-bI-IWH"/>
+        <segue reference="2d6-3V-Cec"/>
     </inferredMetricsTieBreakers>
 </document>

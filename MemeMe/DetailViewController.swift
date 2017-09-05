@@ -22,7 +22,6 @@ class DetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = true
-        self.navigationItem.rightBarButtonItem?.title = "Edit"
         
         self.memeImageView!.image = meme.memedImage
     }
@@ -30,12 +29,6 @@ class DetailViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.tabBarController?.tabBar.isHidden = false
-    }
-    
-    @IBAction func editMeme(_ sender: Any) {
-        let editController = self.storyboard!.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        editController.meme = self.meme
-        self.navigationController?.pushViewController(editController, animated: true)
     }
 
 }

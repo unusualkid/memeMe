@@ -11,6 +11,7 @@ import UIKit
 class CollectionViewController: UICollectionViewController {
 
     @IBOutlet weak var addButton: UIBarButtonItem!
+    @IBOutlet weak var flowLayout: UICollectionViewFlowLayout!
     
     var memes = [Meme]()
     
@@ -26,8 +27,13 @@ class CollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "MemeCollectionViewCell")
+        let space:CGFloat = 3.0
+        let widthDimension = (view.frame.size.width - (2 * space)) / 3.0
+        let heightDimension = (view.frame.size.height - (4 * space)) / 5.0
+        
+        flowLayout.minimumInteritemSpacing = space
+        flowLayout.minimumLineSpacing = space
+        flowLayout.itemSize = CGSize(width: widthDimension, height: heightDimension)
     }
 
     

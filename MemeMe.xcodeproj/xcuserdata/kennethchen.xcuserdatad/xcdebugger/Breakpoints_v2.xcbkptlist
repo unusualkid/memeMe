@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MemeMe/ViewController-MemeEditor.swift"
-            timestampString = "526282062.08326"
+            timestampString = "526296424.446339"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "60"
+            endingLineNumber = "60"
             landmarkName = "callActivityViewController(_:)"
             landmarkType = "7">
          </BreakpointContent>

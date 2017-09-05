@@ -70,7 +70,7 @@ class ViewController: UIViewController {
         unsubscribeFromKeyboardNotifications()
     }
     
-    // MARK: Helper Functions
+    // MARK: Helpers
     
     func configureUI(_ textField: UITextField) {
         textField.defaultTextAttributes = memeTextAttributes

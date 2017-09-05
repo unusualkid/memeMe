@@ -35,10 +35,6 @@ extension ViewController {
 
         return meme
     }
-    
-//    func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-//        self.displaySavedMessage(error: error)
-//    }
 
     // Add the meme to the array on the AppDelegate
     func save(meme: Meme) {
