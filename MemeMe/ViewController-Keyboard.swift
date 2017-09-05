@@ -6,7 +6,6 @@
 //  Copyright © 2017 Cotery. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 // This extention has all the keyboard related methods
